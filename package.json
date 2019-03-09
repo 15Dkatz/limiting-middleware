@@ -1,6 +1,6 @@
 {
   "name": "limiting-middleware",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Express rate limiting middleware",
   "main": "index.js",
   "scripts": {

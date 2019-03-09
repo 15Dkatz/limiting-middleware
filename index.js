@@ -3,7 +3,7 @@
 const LimitingMiddleware = require('limiting-middleware');
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
-exports = LimitingMiddleware;
+exports.default = LimitingMiddleware;
