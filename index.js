@@ -26,7 +26,7 @@ class LimitingMiddleware {
 
   limitByIp() {
     return (req, res, next) => {
-      const requesterIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
+      const requesterIp = String(req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown');
 
       console.log('requesterIp', requesterIp);
 
