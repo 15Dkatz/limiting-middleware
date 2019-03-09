@@ -7,7 +7,7 @@
  */
 
 /**
- * const LimitingMiddleware = require('./limiting-middleware');
+ * const LimitingMiddleware = require('limiting-middleware');
  * app.use(new LimitingMiddleware().limitByIp());
  */
 
