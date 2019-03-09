@@ -61,6 +61,4 @@ class LimitingMiddleware {
   }
 }
 
-Object.defineProperty(exports, "__esModule", { value: true });
-
-exports.default = LimitingMiddleware;
+module.exports = LimitingMiddleware;
