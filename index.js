@@ -8,7 +8,9 @@
 
 /**
  * const LimitingMiddleware = require('limiting-middleware');
- * app.use(new LimitingMiddleware().limitByIp());
+ * app.use(new LimitingMiddleware({ limit: 100, resetInterval: 1200000 }).limitByIp());
+ *
+ * 100 request limit. 1200000ms reset interval (20m)
  */
 
 const DEFAULT_LIMIT = 100;
@@ -17,10 +19,10 @@ const HOURS = MINUTES * 60;
 const DEFAULT_INTERVAL = MINUTES * 15;
 
 class LimitingMiddleware {
-  constructor({ limit } = {}) {
+  constructor({ limit, resetInterval } = {}) {
     this.ipHitsMap = {};
     this.limit = limit || DEFAULT_LIMIT;
-    this.resetInterval = DEFAULT_INTERVAL;
+    this.resetInterval = resetInterval || DEFAULT_INTERVAL;
     this.startResetInterval();
   }
 
