@@ -59,7 +59,7 @@ class LimitingMiddleware {
   }
 
   startResetInterval(interval = this.resetInterval) {
-    setInterval(this.resetIpHitsMap, interval);
+    setInterval(() => this.resetIpHitsMap(), interval);
   }
 }
 
